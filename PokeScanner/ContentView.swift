@@ -49,7 +49,7 @@ struct ContentView: View {
             }
             .navigationTitle("My Cards")
             .navigationBarItems(trailing: Button(action: { isScanning = true }) {
-                Image(systemName: "plus")
+                Image(systemName: "camera")
             })
             .sheet(isPresented: $isScanning) {
                 ScanView(cards: $cardStore.cards, isScanning: $isScanning)
